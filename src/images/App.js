@@ -5,7 +5,7 @@ import Body from "./components/Body";
 import Footer from "./components/Footer";
 import "./App.css";
 
-const App = () => {
+const PortfolioApp = () => {
   return (
     <div>
       <Header />
@@ -16,6 +16,5 @@ const App = () => {
 };
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<App />);
+root.render(<PortfolioApp />);
 
-export default App;

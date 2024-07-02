@@ -1,38 +1,867 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'poppins',sans-serif;
+  text-decoration: none;
+  scroll-behavior: smooth;
+  
+}
+html{
+  overflow-x: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  background-color: #1f242d;
+}
+section{
+  
+  min-height: 100vh;
+  padding: 0rem 8% 2rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* HEADER--------------------------------------------- */
+.header{
+  width: 100%;
+  position: fixed;
+  z-index: 999;
+  background-color:#1f242d;
+  padding: 10px 13px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 10px 10px -2px rgba(0,0,0,0.25); 
+ 
+}
+.header.sticky{
+ border-bottom: 0 2px 2px -2px rgba(0,0,0,0.25); ;
+}
+.logo{
+  font-size: 30px; 
+  margin-left: 80px;
+  color: white ;
+  font-weight: 100;
+  text-decoration: none;
+}
+.span{
+  color: #0ef;
+}
+.navbar{
+  margin-right: 100px;
+}
+.navbar a{
+  font-size: 17px;
+  margin-left: 2rem;
+  text-decoration: none;
+  color: white;
+  
+}
+.navbar a:hover,
+.navbar a.active {
+  color: #0ef;
+  text-shadow: #0ef;
+  text-shadow: 0 0 10px white;
+}
+
+#menu-icon{
+  color: white;
+  font-size: 30px;
+  display: none;
+}
+
+/* BODY--------------------------------------------- */
+
+/* HOME--------------------------------------------- */
+#home{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.home-content h3{
+  color: white;
+  font-weight: 700;
+  font-size: 30px;
+}
+.home-content h3:nth-of-type(2){
+  margin-bottom: 10px;
+}
+span{
+  color: #0ef;
+}
+.home-content h1{
+  color: white;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 1.5;
+}
+.home-content p{
+  color: white;
+  margin-top: 5px;
+}
+.social-media a{
+display: inline-flex;
+justify-content: center;
+align-items: center;
+width: 32px;
+height: 32px;
+font-size: 32px;
+border: 2px solid #0ef;
+border-radius: 50%;
+background: transparent;
+color: #0ef;
+margin: 24px 16px 24px 0;
+font-size: 20px;
+}
+.social-media a:hover{
+  background-color: #0ef;
+  color: rgb(1, 8, 31);
+  box-shadow: 0 0 10px solid #0ef;
+}
+.btn{
+  display: inline-block;
+  padding: 8px 20px;
+  border: 2px solid #0ef;
+  border-radius: 64px;
+  font-size: 16px;
+  font-weight: 600;
+  background: transparent;
+  color: #0ef;
+}
+.btn:hover{    
+  background: #0ef;
+  color: rgb(72, 72, 72);
+  box-shadow: 0 0 2rem #0ef;
+}
+.home-img img{
+  width: 600px;
+  animation: floatImage 4s ease-in-out infinite;
+  width:80%;
+  border-radius:100%;
+  
+}
+@keyframes floatImage{
+  0%{
+      transform: translateY();
+  }
+  50%{
+      transform: translateY(-1rem);
+  }
+  100%{
+      transform: translateY();
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+/* ABOUT ME--------------------------------------------- */
+#about{
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  background: #323946;
+  min-height: 100vh;
+}
+.about-more .heading{
+  align-items: center;
+}
+.about-more h2{
+  color: #0ef;
+  font-size: 37px;
+  font-weight: 750;
+  line-height: 1.6;  
+}
+#about .about-more h2 span{
+  color: rgb(255, 255, 255);
+}
+.about-more h3{
+  font-weight: 600;
+  color: white;
+  font-size: 25px;    
+}
+.about-more p{
+  color: white;
+  font-size: 20px;
+  margin: 16px 0 32px ;
+}
+.btn1{
+  display: inline-block;
+  background: #0ef;
+  color: rgb(72, 72, 72);
+  box-shadow: 0 0 20px #0ef;
+  padding: 8px 20px;
+  border: 2px solid #0ef;
+  border-radius: 64px;
+  font-size: 16px;
+  font-weight: 600;   
+}
+.btn1:hover{
+  border: 2px solid #0ef;
+  background: transparent;
+  color: #0ef;
+  box-shadow: none;
+}
+.about-img img{
+  width: 600px;
+}
+
+
+/* SERVICES--------------------------------------------- */
+#service{ 
+  min-height: 100vh;
+  margin: 10px ;
+  padding: 90px 90px ;  
+}
+#service .heading{
+  text-align: center;
+  margin-bottom: 30px;
+}
+#service h2{
+  color: white;
+  font-size: 45px;
+  font-weight: 850;
+  line-height: 1.6;
+}
+#service span{
+  color: #0ef;
+}
+.servcontainer{
+  display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 32px;
+}
+.servcontainer .code{
+  flex: 16 16 480px;
+  border-radius: 32px;
+  background: #323946;
+  text-align: center;
+  border: 3px solid #1f242d;
+  padding: 32px 48px 48px;
+  transition: 0.5 ease;
+}
+.servcontainer .code:hover{
+  transform: scale(1.04);
+  border: solid #0ef;
+}
+.code a i{
+  color: #0ef;   
+  font-size:50px ;
+}
+.code h3{
+  font-size: 30px;
+  color: white;
+  line-height: 1.8;
+  font-weight: 700;
+}
+.code p{
+  color: white;
+  font-weight: 300;
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+
+/* PORTFOLIO FOR LATEST PROJECTS--------------------------------------------- */
+#portfolio{  
+  background-color: #323946;
+  min-height: 100vh;
+  padding: 90px 90px;    
+}
+#portfolio .heading{
+  text-align: center;
+  margin-bottom: 30px;
+}
+#portfolio h2{
+  color: #0ef;
+  font-size: 45px;
+  font-weight: 850;
+  line-height: 1.6;
+}
+#portfolio span{
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.portcontainer{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  align-items: center;
+  gap: 40px;
+}
+.portcontainer .portbox{
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  border-radius: 32px;
+  box-shadow: 0 0 2px solid #1f242d ;
+}
+.portcontainer .portbox img{
+  width: 100%;
+  transition: .5 ease;
+}
+.portbox:hover img{
+  transform: scale(1.1);
+}
+.portbox .portlayer{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0,0,0,0.1),#0ef);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  transform: translateY(100%);
+  transition: .5 ease;
+}
+.portbox:hover .portlayer{
+  transform: translateY(0);
+}
+.portlayer h3{
+  font-size: 30px;
+  color: white;
+}
+.portlayer p{
+  color: white;
+  text-align: center;
+  margin: 10px 30px;
+}
+.portlayer a{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: white;
+}
+.portlayer a i{
+  font-size:20px ;
+  color: black;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+/* CONTACT US--------------------------------------------- */
+#contact{
+  min-height: 100vh;
+  padding: 90px 90px;
+}
+#contact .heading{
+  text-align: center;
+  margin-bottom: 30px;
+}
+#contact h2{
+  color: white;
+  font-size: 45px;
+  font-weight: 850;
+  line-height: 1.6;
+}
+#contact span{
+  color: #0ef;
+}
+#contact form{
+ max-width: 800px;
+ margin: 10px auto;
+ text-align: center;
+ margin-bottom: 30px;
+ text-decoration: none;
+}
+#contact form .box{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+#contact form .box input,
+#contact form .box textarea{
+  width: 90%;
+  padding: 18px;
+  font-size: 17px;
+  border-radius: 14px;
+  background: #323946;
+  color:white;
+  margin: 10px 5px;
+}
+#contact form .box input{
+  width: 42%;
+}
+#contact form .box textarea{
+  resize: none;
+}
+.box .btn{
+  font-size: 22px;
+  align-items: flex-start;
+  margin-top: 30px;
+}
+
+
+/* FOOTER--------------------------------------------- */
+footer p{
+ background-color: #323946;
+ font-size: 20px;
+ color: white;
+ text-align: center;
+ padding: 15px;
+}
+.foot p1{
+  color: #0ef;
+}
+
+
+
+/* @media (max-width:1084px) {
+  .header{
+      margin-top: -20px;
   }
-  to {
-    transform: rotate(360deg);
+  
+  #about{
+      padding: 2px 2px;
   }
+  
+  #home{
+      padding: 2px 2px ;
+      margin: 20px;
+  }
+  .logo{
+      margin-left: 70px;
+  }
+  
+}
+@media (max-width:1071px) {
+  .home-content h1{
+      
+      line-height: 1.1;
+  }
+}
+@media (max-width:1081px){
+  
+  #menu-icon{
+      display: block;
+      margin-right: 90px;
+  }
+  .logo{
+      margin-left: 32px;
+  }
+
+  .header{
+      margin-top: -20px;
+  }
+  
+  .navbar{
+      position: absolute;
+      top: 70%;
+      left: 0;
+      width: 100%;
+      padding: 11px 2%;
+      background-color: #1f242d;
+      box-shadow: 0 10px 10px -2px rgba(0,0,0,0.25);
+      display: none;
+     
+
+  }
+  
+  .navbar.active{
+      display: block;
+  }
+  .navbar a{
+      display: block;
+      font-size: 24px;
+      margin: 35px 29px;
+  }
+  #home{
+      padding: 2px 2px ;
+      margin: 20px;
+  }
+  #about{
+      padding: 2px 2px;
+  }
+}   
+ 
+
+
+@media (max-width:960px){
+  #home{
+      padding: 2px 2px ;
+      margin-left: 20px;
+  }
+  #about{
+      padding: 2px 2px;
+  }
+}
+
+@media (max-width:935px){
+  #home{
+      padding: 2px 2px ;
+      margin-left: 10px;
+  }
+  #about{
+      padding: 2px 2px;
+  }
+  .home-content h3{
+      color: white;
+      font-weight: 600;
+      font-size: 20px;
+  }
+  .home-content h3:nth-of-type(2){
+      margin-bottom: 5px;
+  }
+  span{
+      color: #0ef;
+  }
+  .home-content h1{
+      color: white;
+      font-weight: 600;
+      font-size: 30px;
+      line-height: 0.9;
+  }
+  .home-content p{
+      color: white;
+      margin-top: 3px;
+  }
+}
+
+
+@media (max-width:831px){
+  #home{
+      padding: 2px 2px ;
+      margin-left: 10px;
+  }
+  #about{
+      padding: 2px 2px;
+  }
+}
+
+
+
+@media (max-width:300px){
+  #home{
+      padding: 2px 2px ;
+      margin-left: 20px;
+  }
+  #about{
+      padding: 2px 2px;
+  }
+  #section{
+      padding: 2px 3px ;
+  }
+}  */
+
+/* for user convenience------------------- */
+@media (max-width:1221px){
+  body{
+      overflow-x: hidden;
+  }
+  .home-content h3{
+      font-weight: 600;
+      font-size: 22px;
+  }
+  .home-content p{
+      font-size: 15px;
+  }
+}
+
+
+@media (max-width:1086px){
+  body{
+      overflow-x: hidden;
+  }
+  .header{
+      padding: 32px 2%;
+  }
+  section{
+      padding: 110px 3% 32px;
+  }
+  .footer{
+      padding:32px 2%;
+      
+  }
+}
+
+
+@media (max-width:970px){
+  body{
+      overflow-x: hidden;
+  }
+  #menu-icon{
+      display: block;
+      margin-right: 50px;
+  }
+  .logo{
+      margin-left: 27px;
+  }
+  .header{
+      margin-top: -0px;
+      padding: 20px 3px;
+  }
+  .navbar{
+      position: absolute;
+      top: 90%;
+      left: 0;
+      width: 100%;
+      padding: 6px 1%;
+      background-color: #1f242d;
+      box-shadow: 0 10px 10px -2px rgba(0,0,0,0.25);
+      display: none;   
+  }
+  .navbar.active{
+      display: block;
+  }
+  .navbar a{
+      display: block;
+      font-size: 24px;
+      margin: 35px 29px;
+  }
+  #home{    
+      margin: 0px;
+  }
+  .home{
+      flex-direction: column;
+  }
+  .about{
+      flex-direction: column-reverse;
+  }
+  .portcontainer{
+      grid-template-columns: repeat(2,1fr);
+  }
+} 
+
+
+
+@media (max-width:797px){
+  body{
+      overflow-x: hidden;
+  }
+  .portcontainer .portlayer h3{
+      font-size: 25px;
+  }
+  .portcontainer .portlayer p{
+      font-size: 15px;
+  }
+  .portcontainer .portlayer a{
+      width: 30px;
+      height: 30px;
+  }
+  .portlayer a i{
+      font-size: 10px;
+  }
+  #contact form .box textarea #messagess{
+     width: 120px;
+  }
+  #contact form .box input{
+      width: 100%;
+  }
+ 
+}
+
+
+@media (max-width:685px){
+  body{
+      overflow-x: hidden;
+  }
+  .portcontainer .portlayer h3{
+      font-size: 20px;
+  }
+  .portcontainer .portlayer p{
+      font-size: 10px;
+  }
+  .portcontainer .portlayer a{
+      width: 30px;
+      height: 30px;
+  }
+  .portlayer a i{
+      font-size: 10px;
+  }
+}
+
+
+@media (max-width:634px){
+  body{
+      overflow-x: hidden;
+  }
+  .portcontainer .portlayer h3{
+      font-size: 30px;
+  }
+  .portcontainer .portlayer p{
+      font-size: 20px;
+  }
+  .portcontainer .portlayer a{
+      width: 60px;
+      height: 60px;
+  }
+  .portlayer a i{
+      font-size: 20px;
+  }
+  .portcontainer{
+      grid-template-columns: repeat(1,1fr);
+  }
+}
+
+
+
+@media (max-width:561px){
+  body{
+   overflow-x: hidden;
+  } 
+  .code a i{
+   color: #0ef;
+   font-size:30px ;
+  }
+  .code h3{
+   font-size: 20px;
+   color: white;
+   line-height: 1.8;
+   font-weight: 700;
+  }
+  .code p{
+   color: white;
+   font-weight: 300;
+   font-size: 10px;
+   margin-bottom: 20px;
+  }
+}
+
+@media (max-width:500px){
+  body{
+      overflow-x: hidden;
+  }
+  .home-content h3{
+      font-weight: 600;
+      font-size: 20px;
+  }
+  .home-content h3:nth-of-type(2){
+      margin-bottom: 10px;
+  }
+  .home-content h1{   
+      font-weight: 600;
+      font-size: 40px;
+      line-height: 1.3;
+  }
+  .home-content p{  
+      margin-top: 5px;
+  }
+  .home-img img{
+   width: 500px;
+  }
+  .about-more h2{
+      font-size: 35px;
+      font-weight: 600;
+      line-height: 1.6;   
+  } 
+  .about-more h3{
+      font-weight: 600;
+      color: white;
+      font-size: 20px;    
+  }
+  .about-more p{
+      color: white;
+      font-size: 16px;
+      margin: 16px 0 32px ;
+  }
+  .about-img img{
+      width: 500px;
+  }
+ .portcontainer .portlayer h3{
+      font-size: 25px;
+  }
+  .portcontainer .portlayer p{
+      font-size: 15px;
+  }
+  .portcontainer .portlayer a{
+      width: 30px;
+      height: 30px;
+  }
+  .portlayer a i{
+      font-size: 10px;
+  }
+  #service .heading{
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 35px;    
+  }
+  .servcontainer .code{
+      flex: 8 8 240px;
+      padding: 16px 32px 32px;
+  }
+  #portfolio h2{
+       color: #0ef;
+      font-size: 35px;
+      font-weight: 800;
+      line-height: 1.6;
+  }
+}
+
+
+@media (max-width:441px){
+  body{
+      overflow-x: hidden;
+  }
+  .code a i{
+      color: #0ef;
+     
+      font-size:30px ;
+  }
+  .code h3{
+      font-size: 20px;
+      color: white;
+      line-height: 1;
+      font-weight: 700;
+      margin: 8px;
+    
+  }
+  .code p{
+      color: white;
+      font-weight: 300;
+      font-size: 10px;
+      margin-bottom: 20px;
+  }
+}
+
+
+@media (max-width:420px){
+  body{
+      overflow-x: hidden;
+  }
+  .portcontainer .portlayer h3{
+      font-size: 20px;
+  }
+  .portcontainer .portlayer p{
+      font-size: 10px;
+  }
+  .portcontainer .portlayer a{
+      width: 30px;
+      height: 30px;
+  }
+  .portlayer a i{
+      font-size: 10px;
+  }
+  #contact h2{
+      color: white;
+      font-size: 35px;
+      font-weight: 800;
+      line-height: 1.6;
+  }
+  .servcontainer .code{
+      flex: 4 4 100px;
+      padding: 8px 8px 8px;
+  }
+  .servcontainer .code .btn{
+       padding: 4px 8px; 
+       border-radius: 64px;
+       font-size: 12px;
+       font-weight: 600;    
+  }
+}
+
+
+@media (max-width:380px) {
+  body{
+      overflow-x: hidden;
+  }
+  .home-img img{
+      width: 400px;
+  }
+   .about-img img{
+      width: 400px;
+  }  
 }
