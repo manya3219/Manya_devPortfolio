@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Manya_devPortfolio/static/css/main.ec5e2d4b.css",
+    "main.js": "/Manya_devPortfolio/static/js/main.3fa16260.js",
+    "static/js/453.e1a4b6e9.chunk.js": "/Manya_devPortfolio/static/js/453.e1a4b6e9.chunk.js",
+    "static/media/my.png": "/Manya_devPortfolio/static/media/my.48929746844f37144915.png",
+    "static/media/portfolio3.jpg": "/Manya_devPortfolio/static/media/portfolio3.8186df376b322a283488.jpg",
+    "static/media/portfolio5.jpg": "/Manya_devPortfolio/static/media/portfolio5.80291050be88a205c33f.jpg",
+    "static/media/portfolio2.jpg": "/Manya_devPortfolio/static/media/portfolio2.b125d1148fc72d7d00a3.jpg",
+    "static/media/portfolio4.jpg": "/Manya_devPortfolio/static/media/portfolio4.eaddd3f1956ae7b3ac39.jpg",
+    "static/media/portfolio6.jpg": "/Manya_devPortfolio/static/media/portfolio6.cfffe2ca4e775e909071.jpg",
+    "static/media/portfolio1.jpg": "/Manya_devPortfolio/static/media/portfolio1.b65d3404bdcc4ee8a852.jpg",
+    "index.html": "/Manya_devPortfolio/index.html",
+    "main.ec5e2d4b.css.map": "/Manya_devPortfolio/static/css/main.ec5e2d4b.css.map",
+    "main.3fa16260.js.map": "/Manya_devPortfolio/static/js/main.3fa16260.js.map",
+    "453.e1a4b6e9.chunk.js.map": "/Manya_devPortfolio/static/js/453.e1a4b6e9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ec5e2d4b.css",
+    "static/js/main.3fa16260.js"
+  ]
+}
